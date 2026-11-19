@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OlovKing — Premium Fast Food</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+  
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <div class="container header-inner">
+      <a href="#" class="logo" id="logo">
+        <span class="logo-icon">🔥</span>
+        <span class="logo-text">Olov<span>King</span></span>
+      </a>
+
+      <nav class="nav" id="nav">
+        <a href="#menu" class="nav-link" data-i18n="nav_menu">Menyu</a>
+        <a href="#promos" class="nav-link" data-i18n="nav_promos">Aksiyalar</a>
+        <a href="#branches" class="nav-link" data-i18n="nav_branches">Filiallar</a>
+        <a href="#reviews" class="nav-link" data-i18n="nav_reviews">Fikrlar</a>
+        <a href="#about" class="nav-link" data-i18n="nav_about">Biz haqimizda</a>
+      </nav>
+
+      <div class="header-actions">
+        <div class="search-box">
+          <input type="text" id="searchInput" placeholder="Mahsulot qidirish..." data-i18n-placeholder="search_placeholder">
+          <i class="fas fa-search"></i>
+        </div>
+
+        <button class="icon-btn" id="langBtn" title="Til">
+          <i class="fas fa-globe"></i>
+          <span id="currentLang">UZ</span>
+        </button>
+
+        <button class="icon-btn" id="themeBtn" title="Rejim">
+          <i class="fas fa-moon"></i>
+        </button>
+
+        <button class="icon-btn" id="favoritesBtn" title="Sevimlilar">
+          <i class="fas fa-heart"></i>
+          <span class="badge" id="favCount">0</span>
+        </button>
+
+        <button class="icon-btn cart-btn" id="cartBtn" title="Savatcha">
+          <i class="fas fa-shopping-bag"></i>
+          <span class="badge" id="cartCount">0</span>
+        </button>
+
+        <button class="btn btn-primary btn-sm" id="authBtn" data-i18n="login">Kirish</button>
+
+        <button class="hamburger" id="hamburger">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#menu" class="mobile-link" data-i18n="nav_menu">Menyu</a>
+    <a href="#promos" class="mobile-link" data-i18n="nav_promos">Aksiyalar</a>
+    <a href="#branches" class="mobile-link" data-i18n="nav_branches">Filiallar</a>
+    <a href="#reviews" class="mobile-link" data-i18n="nav_reviews">Fikrlar</a>
+    <a href="#about" class="mobile-link" data-i18n="nav_about">Biz haqimizda</a>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-bg"></div>
+    <div class="container hero-content">
+      <div class="hero-text">
+        <span class="hero-badge" data-i18n="hero_badge">Yangi ta'm • Premium sifat</span>
+        <h1 data-i18n="hero_title">Olovli ta'mlar<br>har bir bo'lakda</h1>
+        <p data-i18n="hero_desc">Eng yangi ingredientlar, issiq yetkazib berish va unutilmas ta'm. Bugun buyurtma bering!</p>
+        <div class="hero-btns">
+          <a href="#menu" class="btn btn-primary btn-lg" data-i18n="order_now">Buyurtma berish</a>
+          <a href="#menu" class="btn btn-outline btn-lg" data-i18n="view_menu">Menyuni ko'rish</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=700&q=80" alt="Premium Burger">
+      </div>
+    </div>
+  </section>
+
+  <!-- CATEGORIES + PRODUCTS -->
+  <section class="section menu-section" id="menu">
+    <div class="container">
+      <div class="section-header">
+        <h2 data-i18n="menu_title">Bizning menyu</h2>
+        <p data-i18n="menu_subtitle">Har bir ta'm alohida e'tibor bilan tayyorlanadi</p>
+      </div>
+
+      <div class="category-tabs" id="categoryTabs">
+        <!-- JS orqali to'ldiriladi -->
+      </div>
+
+      <div class="products-grid" id="productsGrid">
+        <!-- JS orqali to'ldiriladi -->
+      </div>
+    </div>
+  </section>
+
+  <!-- PROMOS -->
+  <section class="section promos-section" id="promos">
+    <div class="container">
+      <div class="section-header">
+        <h2 data-i18n="promos_title">Aksiyalar va takliflar</h2>
+        <p data-i18n="promos_subtitle">Bugungi eng yaxshi chegirmalar</p>
+      </div>
+      <div class="promos-grid" id="promosGrid">
+        <!-- JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- BRANCHES -->
+  <section class="section branches-section" id="branches">
+    <div class="container">
+      <div class="section-header">
+        <h2 data-i18n="branches_title">Bizning filiallar</h2>
+        <p data-i18n="branches_subtitle">Sizga yaqin bo'lgan filialni tanlang</p>
+      </div>
+      <div class="branches-grid" id="branchesGrid">
+        <!-- JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section class="section reviews-section" id="reviews">
+    <div class="container">
+      <div class="section-header">
+        <h2 data-i18n="reviews_title">Xaridorlarimiz fikri</h2>
+        <p data-i18n="reviews_subtitle">Minglab mijozlar ishonchi</p>
+      </div>
+      <div class="reviews-grid" id="reviewsGrid">
+        <!-- JS -->
+      </div>
+
+      <div class="add-review-card">
+        <h3 data-i18n="add_review">Fikringizni qoldiring</h3>
+        <form id="reviewForm">
+          <div class="form-row">
+            <input type="text" id="reviewName" placeholder="Ismingiz" required data-i18n-placeholder="your_name">
+            <div class="rating-input" id="ratingInput">
+              <i class="fas fa-star" data-value="1"></i>
+              <i class="fas fa-star" data-value="2"></i>
+              <i class="fas fa-star" data-value="3"></i>
+              <i class="fas fa-star" data-value="4"></i>
+              <i class="fas fa-star" data-value="5"></i>
+            </div>
+          </div>
+          <textarea id="reviewText" rows="3" placeholder="Fikringiz..." required data-i18n-placeholder="your_review"></textarea>
+          <button type="submit" class="btn btn-primary" data-i18n="send_review">Yuborish</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section about-section" id="about">
+    <div class="container about-grid">
+      <div class="about-content">
+        <h2 data-i18n="about_title">Biz haqimizda</h2>
+        <p data-i18n="about_text1">OlovKing — 2018-yildan beri Toshkentda ishlayotgan premium fast food brendi. Biz faqat eng yaxshi ingredientlardan foydalanamiz va har bir buyurtmani sevgi bilan tayyorlaymiz.</p>
+        <p data-i18n="about_text2">Maqsadimiz — har bir mijozga unutilmas ta'm va tezkor xizmatni taqdim etish. 15+ filial, 50 000+ baxtli mijoz.</p>
+        <div class="about-stats">
+          <div class="stat">
+            <strong>15+</strong>
+            <span data-i18n="stat_branches">Filial</span>
+          </div>
+          <div class="stat">
+            <strong>50K+</strong>
+            <span data-i18n="stat_customers">Mijoz</span>
+          </div>
+          <div class="stat">
+            <strong>4.9</strong>
+            <span data-i18n="stat_rating">Reyting</span>
+          </div>
+        </div>
+      </div>
+      <div class="about-image">
+        <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=600&q=80" alt="Restoran">
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <div class="logo footer-logo">
+          <span class="logo-icon">🔥</span>
+          <span class="logo-text">Olov<span>King</span></span>
+        </div>
+        <p data-i18n="footer_desc">Premium fast food. Issiq, tez va mazali.</p>
+        <div class="socials">
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-telegram"></i></a>
+          <a href="#"><i class="fab fa-facebook"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer_links">Havolalar</h4>
+        <a href="#menu" data-i18n="nav_menu">Menyu</a>
+        <a href="#promos" data-i18n="nav_promos">Aksiyalar</a>
+        <a href="#branches" data-i18n="nav_branches">Filiallar</a>
+        <a href="#about" data-i18n="nav_about">Biz haqimizda</a>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer_contact">Aloqa</h4>
+        <p><i class="fas fa-phone"></i> +998 71 200 70 70</p>
+        <p><i class="fas fa-envelope"></i> info@olovking.uz</p>
+        <p><i class="fas fa-clock"></i> 09:00 – 02:00</p>
+      </div>
+      <div class="footer-col">
+        <h4 data-i18n="footer_delivery">Yetkazib berish</h4>
+        <p data-i18n="footer_delivery_text">Toshkent shahri bo'ylab 30-45 daqiqada bepul yetkazib beramiz (30 000 so'mdan yuqori buyurtmalarda).</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>© 2025 OlovKing. Barcha huquqlar himoyalangan.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- CART SIDEBAR -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <aside class="cart-sidebar" id="cartSidebar">
+    <div class="cart-header">
+      <h3 data-i18n="cart_title">Savatcha</h3>
+      <button class="close-btn" id="closeCart"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span data-i18n="total">Jami:</span>
+        <strong id="cartTotal">0 so'm</strong>
+      </div>
+      <button class="btn btn-primary btn-block" id="checkoutBtn" data-i18n="checkout">Buyurtma berish</button>
+      <button class="btn btn-outline btn-block" id="clearCartBtn" data-i18n="clear_cart">Savatchani tozalash</button>
+    </div>
+  </aside>
+
+  <!-- FAVORITES MODAL -->
+  <div class="modal" id="favoritesModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 data-i18n="favorites_title">Sevimli mahsulotlar</h3>
+        <button class="close-btn" id="closeFavorites"><i class="fas fa-times"></i></button>
+      </div>
+      <div class="favorites-list" id="favoritesList"></div>
+    </div>
+  </div>
+
+  <!-- AUTH MODAL -->
+  <div class="modal" id="authModal">
+    <div class="modal-content auth-modal">
+      <div class="modal-header">
+        <h3 id="authTitle" data-i18n="login">Kirish</h3>
+        <button class="close-btn" id="closeAuth"><i class="fas fa-times"></i></button>
+      </div>
+      <div class="auth-tabs">
+        <button class="auth-tab active" data-tab="login" data-i18n="login">Kirish</button>
+        <button class="auth-tab" data-tab="register" data-i18n="register">Ro'yxatdan o'tish</button>
+      </div>
+      <form id="loginForm" class="auth-form">
+        <input type="tel" id="loginPhone" placeholder="Telefon raqam" required>
+        <input type="password" id="loginPassword" placeholder="Parol" required>
+        <button type="submit" class="btn btn-primary btn-block" data-i18n="login">Kirish</button>
+      </form>
+      <form id="registerForm" class="auth-form" style="display:none">
+        <input type="text" id="regName" placeholder="Ism familiya" required>
+        <input type="tel" id="regPhone" placeholder="Telefon raqam" required>
+        <input type="email" id="regEmail" placeholder="Email" required>
+        <input type="password" id="regPassword" placeholder="Parol" required>
+        <input type="password" id="regPassword2" placeholder="Parolni tasdiqlang" required>
+        <button type="submit" class="btn btn-primary btn-block" data-i18n="register">Ro'yxatdan o'tish</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- CHECKOUT MODAL -->
+  <div class="modal" id="checkoutModal">
+    <div class="modal-content checkout-modal">
+      <div class="modal-header">
+        <h3 data-i18n="checkout">Buyurtma berish</h3>
+        <button class="close-btn" id="closeCheckout"><i class="fas fa-times"></i></button>
+      </div>
+      <form id="checkoutForm">
+        <div class="form-group">
+          <label data-i18n="delivery_method">Yetkazib berish usuli</label>
+          <div class="radio-group">
+            <label class="radio-card">
+              <input type="radio" name="delivery" value="delivery" checked>
+              <span data-i18n="home_delivery">Uyga yetkazib berish</span>
+            </label>
+            <label class="radio-card">
+              <input type="radio" name="delivery" value="pickup">
+              <span data-i18n="pickup">Do'kondan olib ketish</span>
+            </label>
+          </div>
+        </div>
+
+        <div id="deliveryFields">
+          <div class="form-row">
+            <input type="text" id="orderName" placeholder="Ism va familiya" required>
+            <input type="tel" id="orderPhone" placeholder="Telefon raqam" required>
+          </div>
+          <div class="form-row">
+            <select id="orderRegion" required>
+              <option value="">Viloyat</option>
+              <option value="toshkent">Toshkent shahri</option>
+              <option value="toshkent-vil">Toshkent viloyati</option>
+            </select>
+            <input type="text" id="orderCity" placeholder="Shahar / Tuman" required>
+          </div>
+          <input type="text" id="orderAddress" placeholder="Ko'cha va uy raqami" required>
+          <textarea id="orderNote" rows="2" placeholder="Qo'shimcha izoh (ixtiyoriy)"></textarea>
+        </div>
+
+        <div id="pickupFields" style="display:none">
+          <label data-i18n="select_branch">Filialni tanlang</label>
+          <select id="pickupBranch" required>
+            <option value="">Filial tanlang</option>
+            <option value="1">Chilonzor filiali</option>
+            <option value="2">Yunusobod filiali</option>
+            <option value="3">Sergeli filiali</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label data-i18n="payment_method">To'lov usuli</label>
+          <div class="radio-group">
+            <label class="radio-card">
+              <input type="radio" name="payment" value="cash" checked>
+              <span data-i18n="cash">Naqd pul</span>
+            </label>
+            <label class="radio-card">
+              <input type="radio" name="payment" value="card">
+              <span data-i18n="card">Bank kartasi</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="order-summary">
+          <h4 data-i18n="order_summary">Buyurtma xulosasi</h4>
+          <div id="orderSummaryList"></div>
+          <div class="summary-total">
+            <span data-i18n="total">Jami:</span>
+            <strong id="orderTotal">0 so'm</strong>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block btn-lg" data-i18n="confirm_order">Buyurtmani tasdiqlash</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- TOAST -->
+  <div class="toast" id="toast"></div>
+
+  <!-- LANGUAGE DROPDOWN -->
+  <div class="lang-dropdown" id="langDropdown">
+    <button data-lang="uz">O'zbekcha</button>
+    <button data-lang="ru">Русский</button>
+    <button data-lang="en">English</button>
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+</html>
